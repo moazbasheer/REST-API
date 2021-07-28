@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\DeviceController;
 use \App\Http\Controllers\UserController;
+use \App\Http\Controllers\FileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +22,7 @@ Route::group(['middleware' => 'auth:sanctum'], function(){
     Route::post('/add', [DeviceController::class, 'add']);
     Route::put('/update', [DeviceController::class, 'update']);
     Route::delete('/delete', [DeviceController::class, 'delete']);
+    Route::post('/upload', [FileController::class, 'upload']);
 });
 
 
